@@ -105,19 +105,19 @@ def process_sentiment_data(api_key, tickers):
 
 # Function to load local data
 def load_data():
-    return pd.read_csv('/Users/ronitgandhi/Desktop_windows/Full Stack ML Project/processed_data.csv')
+    return pd.read_csv('processed_data.csv')
 
 
 def load_data2():
-    return pd.read_csv('/Users/ronitgandhi/Desktop_windows/Full Stack ML Project/nasdaq_stocks_2.csv')
+    return pd.read_csv('nasdaq_stocks_2.csv')
 
 
 def load_data3():
-    return pd.read_csv('/Users/ronitgandhi/Desktop_windows/Full Stack ML Project/final_categorized_etfs_with_risk.csv')
+    return pd.read_csv('final_categorized_etfs_with_risk.csv')
 
 def load_stock_data():
     # Replace 'your_csv_file.csv' with the path to your file
-    df = pd.read_csv('/Users/ronitgandhi/Desktop_windows/Full Stack ML Project/nasdaq_stocks_2.csv')  # Load your CSV file
+    df = pd.read_csv('nasdaq_stocks_2.csv')  # Load your CSV file
     stock_column = 'Symbol'  # Replace 'Symbol' with the name of your stock column
     stock_list = df[stock_column].dropna().unique().tolist()  # Extract unique stock symbols
     return df, stock_list
